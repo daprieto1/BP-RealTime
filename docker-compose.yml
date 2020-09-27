@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  rethink:
+    image: rethinkdb:latest
+    ports:
+    - "32770:8080"
+    - "28015:28015"
+    - "29015:29015"
