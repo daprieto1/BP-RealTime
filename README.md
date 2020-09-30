@@ -2,3 +2,6 @@ https://www.google.com/search?q=rethink+db+java+examples&rlz=1C5CHFA_enCO917CO91
 
 https://www.baeldung.com/spring-deferred-result
 
+https://www.baeldung.com/websockets-spring
+https://spring.io/guides/gs/messaging-stomp-websocket/
+https://geowarin.com/a-simple-chat-with-spring-boot-and-rethinkdb/
