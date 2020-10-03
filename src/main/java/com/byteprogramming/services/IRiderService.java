@@ -8,6 +8,9 @@ import java.util.UUID;
 public interface IRiderService {
 
     public List<Rider> getRiders();
+
+    public Rider insertRider(Rider rider);
+
     public Rider updateRider(UUID riderId, Rider rider);
 
 }

@@ -26,6 +26,12 @@ public class RiderController {
         return riderService.getRiders();
     }
 
+    @PostMapping("/riders")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Rider insertRider(@RequestBody Rider rider) {
+        return riderService.insertRider(rider);
+    }
+
     @PutMapping("/riders/{riderId}")
     public Rider updateRider(@PathVariable UUID riderId, @RequestBody Rider rider) {
         return riderService.updateRider(riderId, rider);

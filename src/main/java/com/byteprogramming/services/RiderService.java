@@ -20,6 +20,11 @@ public class RiderService implements IRiderService {
     }
 
     @Override
+    public Rider insertRider(Rider rider) {
+        return repository.insertRider(rider);
+    }
+
+    @Override
     public Rider updateRider(UUID riderId, Rider rider) {
         return repository.updateRider(riderId, rider);
     }

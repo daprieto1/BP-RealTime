@@ -13,8 +13,7 @@ public class RiderWebSocketController {
     @MessageMapping("/riderUpdate")
     @SendTo("/topic/riders")
     public Rider send(Rider rider) throws Exception {
-
-        return new Rider(UUID.randomUUID(), "test", 1.1, 1.1);
+        return null;
     }
 
 }

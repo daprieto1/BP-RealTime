@@ -13,7 +13,7 @@ public class Rider {
 
     }
 
-    public Rider(UUID id, String name, double totalKms, double avgSpeed) {
+    public Rider(String name, double totalKms, double avgSpeed) {
         this.id = id;
         this.name = name;
         this.totalKms = totalKms;
