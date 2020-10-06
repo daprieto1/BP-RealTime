@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Spring boot and Rethinkdb Chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
 
-<div id="container">
-    <table>
-        <thead>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Average Speed</th>
-            <th>Total Km</th>
-        </thead>
-        <tbody id="riders">
+<main role="main" class="jumbotron">
+    <div id="jumbotron">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Average Speed</th>
+                <th scope="col">Total Km</th>
+            </tr>
+            </thead>
+            <tbody id="riders">
 
-        </tbody>
-    </table>
-</div>
+            </tbody>
+        </table>
+    </div>
+</main>
 
 <script src="webjars/jquery/3.1.1-1/jquery.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 <script src="webjars/stomp-websocket/2.3.3/stomp.js"></script>
 <script src="js/main.js"></script>
 </body>

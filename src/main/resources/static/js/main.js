@@ -1,8 +1,15 @@
-function appendRider(rider) {
-    var $riders = $('#riders');
-    $riders.html('');
+'use strict';
 
-    var $rider = $(`
+function drawRiders(riders) {
+    var $ridersHtml = $('#riders');
+    $ridersHtml.html('');
+    riders.forEach(appendRider);
+}
+
+function appendRider(rider) {
+    const $riders = $('#riders');
+
+    const $rider = $(`
         <tr>
             <td>${rider.id}</td>
             <td>${rider.name}</td>
@@ -10,11 +17,12 @@ function appendRider(rider) {
             <td>${rider.totalKms}</td>
         </tr>        
     `);
+
     $riders.append($rider);
 }
 
 function getRidersPolling() {
-    $.get('/riders').done(riders => riders.forEach(appendRider));
+    $.get('/riders').done(riders => drawRiders(riders));
     setTimeout(() => {
         getRidersPolling()
     }, 5000)
@@ -31,12 +39,12 @@ async function getRidersLongPolling() {
         await getRidersLongPolling();
     } else {
         let riders = JSON.parse(await response.text());
-        riders.forEach(appendRider)
+        drawRiders(riders);
         await getRidersLongPolling();
     }
 }
 
 //getRidersPolling();
 
-$.get('/riders').done(riders => riders.forEach(appendRider));
+$.get('/riders').done(riders => drawRiders(riders));
 getRidersLongPolling();
